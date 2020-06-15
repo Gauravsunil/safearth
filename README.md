@@ -6,14 +6,16 @@ Here in the folder of ScreenShots i am also including screenshots of my work-
 
 # How to Connect
 
-# Step1- 
-First Connect your mongodb server
-# Step2-
+# Step1-
 Open backend folder and install all the packages using npm install
 and then run server.js file using npm start
-# Step3-
+# Step2-
 Once you connect your backend now open your folder Frontend and again install all the packages and 
 run the react app using npm start
+
+# Step3-
+now open your browser and run localhost:3000/
+and you will land to login page
 
 # After All the Steps now you are on your way
 
