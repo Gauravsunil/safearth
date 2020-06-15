@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server"
+    "frontend-install":"npm install --prefix frontend",
+    "start": "nodemon server",
+    "server":"nodemon server",
+    "frontend": "npm start --prefix frontend",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +19,8 @@
     "express": "^4.17.1",
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.13",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "react-router-dom": "^5.2.0",
+    "reactstrap": "^8.4.1"
   }
 }
