@@ -44,7 +44,7 @@ class MainComponent extends Component {
         <Route exact path="/home/:email" component={HomePage}/>
         <Route exact path="/log/:user" component={LogPage}/>
 
-        <Redirect to="/register" />
+        <Redirect to="/login" />
         </Switch>
         </CSSTransition>
         </TransitionGroup>
