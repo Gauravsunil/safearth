@@ -4,7 +4,8 @@ const bodyParser=require('body-parser');
 const app=express();
 
 const mongoose=require('mongoose');
-const port=process.env.PORT||5000;
+const path = require('path');
+const port=process.env.PORT ||5000;
 app.use(bodyParser.json());
 
 app.use(cors());
@@ -22,6 +23,15 @@ var Users=require('./routes/Users');
 
 app.use('/users',Users);
 
+if(process.env.NODE.ENV === 'production') {
+  app.use(express.static('frontend/build'));
+
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+  });
+  
+}
 app.listen(port,()=>{
     console.log('Server is running on :'+port);
 });
