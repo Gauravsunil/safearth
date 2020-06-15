@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-const url='mongodb://127.0.0.1:27017/safearth';
+const url='mongodb+srv://Gaurav123:Gaurav123@cluster0-fudtm.mongodb.net/safearth?retryWrites=true&w=majority';
 
 mongoose.connect(url)
 .then(()=>{
